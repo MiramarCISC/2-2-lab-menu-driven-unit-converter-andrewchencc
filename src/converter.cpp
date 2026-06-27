@@ -42,8 +42,8 @@ bool isValidValueForChoice(int choice, double value) {
         return false;
     }
 
-    if (requiresNonNegativeValue(choice)) {
-        return value >= 0.0;
+    if (requiresNonNegativeValue(choice) && value < 0.0) {
+        return false;
     }
 
     return true;
