@@ -12,11 +12,11 @@ double centimetersToInches(double centimeters) {
 }
 
 double poundsToKilograms(double pounds) {
-    return pounds * 0.45359237;
+    return pounds * 0.453592;
 }
 
 double kilogramsToPounds(double kilograms) {
-    return kilograms / 0.45359237;
+    return kilograms / 0.453592;
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
@@ -42,13 +42,8 @@ bool isValidValueForChoice(int choice, double value) {
         return false;
     }
 
-    // Exit is a menu command, not a conversion.
-    if (choice == EXIT_CHOICE) {
-        return false;
-    }
-
-    if (requiresNonNegativeValue(choice) && value < 0.0) {
-        return false;
+    if (requiresNonNegativeValue(choice)) {
+        return value >= 0.0;
     }
 
     return true;
