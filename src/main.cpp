@@ -1,4 +1,6 @@
 #include "converter.hpp"
+
+#include <iomanip>
 #include <iostream>
 #include <limits>
 
@@ -8,6 +10,8 @@ int main() {
     int choice = -1;
     double value = 0.0;
     double result = 0.0;
+    
+    cout << fixed << setprecision(2);
 
     do {
         printMenu();
