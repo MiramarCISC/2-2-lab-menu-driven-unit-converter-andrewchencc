@@ -4,19 +4,19 @@
 using namespace std;
 
 double inchesToCentimeters(double inches) {
-    return inches * 2.54;
+    return inches * CENTIMETERS_PER_INCH;
 }
 
 double centimetersToInches(double centimeters) {
-    return centimeters / 2.54;
+    return centimeters / CENTIMETERS_PER_INCH;
 }
 
 double poundsToKilograms(double pounds) {
-    return pounds * 0.453592;
+    return pounds / POUNDS_PER_KILOGRAM;
 }
 
 double kilogramsToPounds(double kilograms) {
-    return kilograms / 0.453592;
+    return kilograms * POUNDS_PER_KILOGRAM;
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
