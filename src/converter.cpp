@@ -4,27 +4,27 @@
 using namespace std;
 
 double inchesToCentimeters(double inches) {
-    return inches * 2.54;
+    return inches * CENTIMETERS_PER_INCH; //jpitts used variable
 }
 
 double centimetersToInches(double centimeters) {
-    return centimeters / 2.54;
+    return centimeters / CENTIMETERS_PER_INCH; //jpitts used variable
 }
 
 double poundsToKilograms(double pounds) {
-    return pounds * 0.453592;
+    return pounds * POUNDS_PER_KILOGRAM; //jpitts used variable 
 }
 
 double kilogramsToPounds(double kilograms) {
-    return kilograms / 0.453592;
+    return kilograms/ POUNDS_PER_KILOGRAM;  // jpitts used variable 
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
-    return (fahrenheit - 32.0) * 5.0 / 9.0;
+    return (fahrenheit - 32.0) / 1.80; //jpitts fraction to decimal 
 }
 
 double celsiusToFahrenheit(double celsius) {
-    return celsius * 9.0 / 5.0 + 32.0;
+    return celsius * 1.80 + 32.0; // jpitts fraction to decimal
 }
 
 bool isValidMenuChoice(int choice) {
